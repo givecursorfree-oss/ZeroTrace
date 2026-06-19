@@ -1,0 +1,122 @@
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+}
+
+.step {
+  padding: clamp(20px, 4vw, 32px);
+  background: var(--color-warm-sand);
+  border-radius: var(--radius-cardlarge);
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-24);
+  align-items: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.stepIndex {
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  color: var(--color-fog);
+}
+
+.title {
+  font-family: var(--font-inter);
+  font-size: var(--text-subheading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-subheading);
+  letter-spacing: var(--tracking-subheading);
+  color: var(--color-midnight-ink);
+}
+
+.desc {
+  font-size: var(--text-body);
+  color: var(--color-driftwood);
+  line-height: var(--leading-body);
+  max-width: 52ch;
+}
+
+.riveWrap,
+.mockupShell {
+  min-height: 220px;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockupShell {
+  padding: 4px;
+}
+
+.mockupBezel {
+  width: min(100%, 260px);
+  padding: 10px 8px 14px;
+  border-radius: 2.25rem;
+  background: linear-gradient(175deg, #2a2a2a 0%, #1a1a1a 40%, #0d0d0d 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 28px 70px rgba(0, 0, 0, 0.22),
+    0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+.mockupScreen {
+  aspect-ratio: 393 / 852;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background: #fdfcfc;
+}
+
+.mockupImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.rive {
+  height: 100%;
+  min-height: 220px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .stepGrid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--spacing-32);
+  }
+
+  .steps li:nth-child(even) .stepGrid {
+    direction: rtl;
+  }
+
+  .steps li:nth-child(even) .copy,
+  .steps li:nth-child(even) .riveWrap,
+  .steps li:nth-child(even) .mockupShell {
+    direction: ltr;
+  }
+
+  .riveWrap,
+  .mockupShell {
+    min-height: 260px;
+  }
+
+  .rive {
+    min-height: 260px;
+  }
+}

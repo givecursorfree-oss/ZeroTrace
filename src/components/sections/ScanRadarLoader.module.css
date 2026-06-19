@@ -1,0 +1,166 @@
+.loader {
+  position: relative;
+  width: 168px;
+  height: 168px;
+  background: color-mix(in srgb, var(--color-midnight-ink) 92%, #0a1628);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 12px color-mix(in srgb, #186f64 40%, transparent),
+    0 0 0 1px color-mix(in srgb, #186f64 35%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  inset: 22px;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, #186f64 45%, transparent);
+  border-radius: 50%;
+  box-shadow: inset 0 0 8px color-mix(in srgb, #186f64 25%, transparent);
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, #186f64 50%, transparent);
+  box-shadow: inset 0 0 6px color-mix(in srgb, #186f64 30%, transparent);
+}
+
+.sweep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top left;
+  animation: radarSweep 2.4s cubic-bezier(0.32, 0.72, 0, 1) infinite;
+  box-shadow: -28px -80px 36px -52px color-mix(in srgb, #186f64 55%, transparent);
+  border-top: 2px solid color-mix(in srgb, #186f64 80%, #00b3ff);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sweep {
+    animation: none;
+    transform: rotate(45deg);
+    opacity: 0.6;
+  }
+
+  .dot {
+    animation: none !important;
+    opacity: 0.35;
+  }
+}
+
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader :global(#dot-1) {
+  --dot-start-top: 100px;
+  --dot-start-left: 140px;
+  --dot-end-top: 130px;
+  --dot-end-left: 20px;
+  --delay: 0s;
+}
+
+.loader :global(#dot-2) {
+  --dot-start-top: 100px;
+  --dot-start-left: 0px;
+  --dot-end-top: -3px;
+  --dot-end-left: 90px;
+  --delay: 0s;
+}
+
+.loader :global(#dot-3) {
+  --dot-start-top: 100px;
+  --dot-start-left: 105px;
+  --dot-end-top: 18px;
+  --dot-end-left: 18px;
+  --delay: 0s;
+}
+
+.loader :global(#dot-4) {
+  --dot-start-top: 110px;
+  --dot-start-left: 150px;
+  --dot-end-top: 140px;
+  --dot-end-left: 30px;
+  --delay: 0s;
+}
+
+.loader :global(#dot-5) {
+  --dot-start-top: -5px;
+  --dot-start-left: 85px;
+  --dot-end-top: 125px;
+  --dot-end-left: 120px;
+  --delay: 4s;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: var(--dot-start-top);
+  left: var(--dot-start-left);
+  border-radius: 9999px;
+  background: color-mix(in srgb, white 35%, transparent);
+  box-shadow:
+    inset 0 0 8px 2px color-mix(in srgb, #186f64 45%, transparent),
+    0 0 5px 2px color-mix(in srgb, #186f64 25%, transparent);
+  animation: dotFly 32s linear infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes dotFly {
+  0% {
+    top: var(--dot-start-top);
+    left: var(--dot-start-left);
+  }
+  100% {
+    top: var(--dot-end-top);
+    left: var(--dot-end-left);
+  }
+  5%,
+  15%,
+  25%,
+  35%,
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
+    background: rgba(255, 255, 255, 1);
+    box-shadow:
+      inset 0 0 10px 2px color-mix(in srgb, #186f64 55%, transparent),
+      0 0 14px 2px color-mix(in srgb, #186f64 70%, transparent);
+  }
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90% {
+    background: color-mix(in srgb, white 35%, transparent);
+    box-shadow:
+      inset 0 0 8px 2px color-mix(in srgb, #186f64 45%, transparent),
+      0 0 5px 2px color-mix(in srgb, #186f64 25%, transparent);
+  }
+}

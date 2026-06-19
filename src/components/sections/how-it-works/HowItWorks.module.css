@@ -1,0 +1,49 @@
+.section {
+  padding: var(--section-padding-y) 0;
+  background: var(--color-parchment-white);
+}
+
+.intro {
+  margin-bottom: clamp(32px, 6vw, 48px);
+}
+
+.heading {
+  font-family: var(--font-waldenburg);
+  font-size: var(--text-heading);
+  font-weight: var(--font-weight-light);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-midnight-ink);
+  margin-bottom: var(--spacing-16);
+  max-width: min(20ch, 100%);
+}
+
+.lead {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-driftwood);
+  max-width: 52ch;
+}
+
+.scrollStage {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  isolation: isolate;
+}
+
+.scrollWrap {
+  position: relative;
+  width: 100%;
+  isolation: isolate;
+}
+
+/* PhoneScrollPro ships a fixed theme toggle — hide outside Framer demo */
+.scrollWrap :global(button[aria-label*='light mode']),
+.scrollWrap :global(button[aria-label*='dark mode']) {
+  display: none !important;
+}
+
+.scrollWrap :global(.phone-scroll-pro) {
+  font-family: var(--font-inter);
+}

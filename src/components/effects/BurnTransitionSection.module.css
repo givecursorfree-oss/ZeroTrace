@@ -1,0 +1,10 @@
+.fallback {
+  height: 96px;
+  margin-top: -1px;
+  background: linear-gradient(
+    180deg,
+    var(--color-warm-sand) 0%,
+    var(--color-parchment-white) 100%
+  );
+  pointer-events: none;
+}

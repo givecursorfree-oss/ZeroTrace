@@ -1,0 +1,9 @@
+.root :global([data-stagger]) {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root :global([data-stagger]) {
+    opacity: 1;
+  }
+}

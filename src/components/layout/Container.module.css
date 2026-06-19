@@ -1,0 +1,7 @@
+.container {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding-inline: max(var(--page-gutter), env(safe-area-inset-left, 0px))
+    max(var(--page-gutter), env(safe-area-inset-right, 0px));
+}

@@ -1,0 +1,123 @@
+.privacy {
+  padding: var(--section-padding-y) 0;
+  background: var(--color-parchment-white);
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-48);
+}
+
+.intro {
+  max-width: 52ch;
+}
+
+.eyebrow {
+  margin-bottom: var(--spacing-12);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-fog);
+}
+
+.heading {
+  font-family: var(--font-waldenburg);
+  font-size: var(--text-heading);
+  font-weight: var(--font-weight-light);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-midnight-ink);
+  margin-bottom: var(--spacing-16);
+  max-width: min(18ch, 100%);
+}
+
+.quote {
+  font-family: var(--font-inter);
+  font-size: var(--text-subheading);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-subheading);
+  letter-spacing: var(--tracking-subheading);
+  color: var(--color-midnight-ink);
+  margin: 0 0 var(--spacing-24);
+  border: none;
+  padding: 0;
+  max-width: 48ch;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-12) var(--spacing-24);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-24);
+}
+
+.fact {
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-driftwood);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-16) var(--spacing-24);
+}
+
+.policyLink {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-midnight-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.policyLink:hover {
+  opacity: 0.7;
+}
+
+.objections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-16);
+  grid-auto-flow: dense;
+}
+
+.objectionCard {
+  padding: clamp(16px, 4vw, 24px);
+  border-radius: var(--radius-cardlarge);
+  background: #ffffff;
+  box-shadow: 0 20px 40px -36px color-mix(in srgb, var(--color-midnight-ink) 14%, transparent);
+}
+
+.objectionQ {
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-midnight-ink);
+  margin-bottom: var(--spacing-8);
+}
+
+.objectionA {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-driftwood);
+  max-width: 48ch;
+}
+
+@media (min-width: 640px) {
+  .objections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .objections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

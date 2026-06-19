@@ -1,0 +1,205 @@
+@import '../../variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  font-family: var(--font-inter);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--color-midnight-ink);
+  background: var(--color-parchment-white);
+  overflow-x: clip;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection in readable content while keeping media protected. */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+blockquote,
+label,
+input,
+textarea,
+a,
+button,
+[role='button'],
+[data-allow-select] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+img.protected-asset,
+picture.protected-asset,
+video.protected-asset,
+[data-protected-asset='true'] {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: auto;
+}
+
+h1,
+h2,
+h3,
+.display-headline {
+  font-family: var(--font-waldenburg);
+}
+
+.font-wordmark {
+  font-family: var(--font-waldenburgfh);
+}
+
+.page-main {
+  background: var(--color-parchment-white);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.page-gutter {
+  padding-inline: max(var(--page-gutter), env(safe-area-inset-left, 0px))
+    max(var(--page-gutter), env(safe-area-inset-right, 0px));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-midnight-ink);
+  outline-offset: 2px;
+}
+
+/* Display headlines — Waldenburg weight 300 */
+.display-headline {
+  font-family: var(--font-waldenburg);
+  font-weight: var(--font-weight-light);
+  color: var(--color-midnight-ink);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+
+/* Monochrome pill buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  min-height: 44px;
+  padding: 0 var(--spacing-16);
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-parchment-white);
+  background: var(--color-midnight-ink);
+  border: 1px solid var(--color-ash-border);
+  border-radius: var(--radius-buttons);
+  transition: opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  min-height: 44px;
+  padding: 0 var(--spacing-12);
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-midnight-ink);
+  background: var(--color-parchment-white);
+  border: 1px solid var(--color-ash-border);
+  border-radius: var(--radius-buttons);
+  box-shadow: var(--shadow-subtle-2);
+  transition: opacity 0.15s ease;
+}
+
+.btn-secondary:hover {
+  opacity: 0.88;
+}
+
+.btn-ghost {
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-midnight-ink);
+  background: transparent;
+  border-radius: var(--radius-buttons);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 0.7;
+}
+
+/* Decorative ambient orbs — color for illustration only */
+.ambient-orb {
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.ambient-orb-violet {
+  background: radial-gradient(circle, color-mix(in srgb, var(--color-void-violet) 55%, transparent) 0%, transparent 70%);
+}
+
+.ambient-orb-orange {
+  background: radial-gradient(circle, color-mix(in srgb, var(--color-ember-orange) 45%, transparent) 0%, transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+}

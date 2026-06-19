@@ -1,0 +1,48 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: transparent;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.45s ease;
+}
+
+.burnLayer {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.exiting {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skip {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 10000;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pills);
+  border: 1px solid var(--color-ash-border);
+  background: var(--color-parchment-white);
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-midnight-ink);
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle-6);
+}
+
+.skip:hover {
+  opacity: 0.85;
+}
+
+.skip:focus-visible {
+  outline: 2px solid var(--color-midnight-ink);
+  outline-offset: 2px;
+}

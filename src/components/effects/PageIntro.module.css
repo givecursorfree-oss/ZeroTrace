@@ -1,0 +1,13 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: var(--color-parchment-white);
+  opacity: 1;
+  transition: opacity 0.55s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+}

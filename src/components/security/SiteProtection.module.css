@@ -1,0 +1,33 @@
+.devtoolsShield {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #050505;
+  color: #f5f2eb;
+  text-align: center;
+  pointer-events: all;
+}
+
+.devtoolsShieldInner {
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.devtoolsShieldTitle {
+  font-family: var(--font-waldenburgfh);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.devtoolsShieldCopy {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, #f5f2eb 72%, transparent);
+}

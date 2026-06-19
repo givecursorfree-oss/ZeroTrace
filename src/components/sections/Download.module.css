@@ -1,0 +1,27 @@
+.download {
+  text-align: center;
+  padding: var(--spacing-96) 0;
+  background: var(--color-warm-sand);
+}
+
+.headline {
+  font-family: var(--font-waldenburg);
+  font-size: var(--text-heading);
+  font-weight: var(--font-weight-light);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-midnight-ink);
+  margin-bottom: var(--spacing-16);
+}
+
+.lead {
+  font-size: var(--text-body);
+  color: var(--color-driftwood);
+  margin-bottom: var(--spacing-8);
+}
+
+.platforms {
+  font-size: 14px;
+  color: var(--color-driftwood);
+  margin-bottom: var(--spacing-32);
+}

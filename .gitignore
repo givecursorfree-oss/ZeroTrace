@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+node_modules
+.next
+out
+dist
+dist-ssr
+*.local
+.DS_Store
+
+# Cursor / agent skills (not part of the shipped site)
+.agents/
+.cursor/
+skills-lock.json
+
+# Design system reference files and markdown docs (not shipped)
+*.md
+theme.css
+tokens.json

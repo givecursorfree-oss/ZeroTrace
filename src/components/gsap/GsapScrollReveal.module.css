@@ -1,0 +1,11 @@
+.pending {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pending {
+    opacity: 1;
+    will-change: auto;
+  }
+}
