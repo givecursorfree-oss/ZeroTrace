@@ -15,7 +15,7 @@ export function VideoCtaSection() {
 
   return (
     <section
-      id="get-app"
+      id="install"
       className="relative min-h-[min(100dvh,640px)] w-full overflow-hidden bg-[var(--color-warm-sand)]"
       aria-labelledby="video-cta-heading"
     >

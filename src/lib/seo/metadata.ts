@@ -68,7 +68,7 @@ export function createPageMetadata({
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE.name} — ${SITE.tagline}`,
+    default: `${SITE.name} - ${SITE.tagline}`,
     template: `%s | ${SITE.name}`,
   },
   description: DEFAULT_DESCRIPTION,
@@ -93,7 +93,7 @@ export const rootMetadata: Metadata = {
     },
   },
   openGraph: {
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} - ${SITE.tagline}`,
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE.name,
@@ -110,7 +110,7 @@ export const rootMetadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} - ${SITE.tagline}`,
     description: DEFAULT_DESCRIPTION,
     images: [`${SITE_URL}${BRAND.full}`],
   },

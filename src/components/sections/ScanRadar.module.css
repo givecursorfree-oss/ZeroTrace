@@ -86,12 +86,20 @@
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: 1.25fr auto;
+    grid-template-columns: 1fr;
     gap: var(--spacing-40);
   }
 
   .radarAside {
-    margin-inline: 0;
-    justify-self: end;
+    order: -1;
+    margin-inline: auto;
+    max-width: min(100%, 420px);
+  }
+
+  .copy {
+    max-width: 52ch;
+    margin-inline: auto;
+    text-align: center;
+    align-items: center;
   }
 }

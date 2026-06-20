@@ -3,7 +3,7 @@
 import { DEVELOPER_NOTE, SITE } from '@/data/content';
 import { GsapScrollReveal } from '@/components/gsap/GsapScrollReveal';
 import { GsapStaggerReveal } from '@/components/gsap/GsapStaggerReveal';
-import { Shield } from 'lucide-react';
+import { GitHubIcon } from '@/components/ui/GitHubIcon';
 import styles from './DeveloperNote.module.css';
 
 export function DeveloperNote() {
@@ -34,7 +34,7 @@ export function DeveloperNote() {
               <span className={`${styles.highlight} ${styles.highlightSage}`}>your device</span>.
             </span>
             <span data-stagger className={styles.quoteChunk}>
-              We are still in beta — verify exports before you share sensitive work.
+              We are still in beta. Verify exports before you share sensitive work.
             </span>
           </p>
         </GsapStaggerReveal>
@@ -52,9 +52,9 @@ export function DeveloperNote() {
               className={styles.cta}
             >
               <span className={styles.ctaIcon} aria-hidden="true">
-                <Shield fill="currentColor" size={16} />
+                <GitHubIcon size={16} />
               </span>
-              View source
+              GitHub
             </a>
           </div>
         </GsapScrollReveal>

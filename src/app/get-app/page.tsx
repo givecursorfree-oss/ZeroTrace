@@ -8,9 +8,9 @@ import { createPageMetadata } from '@/lib/seo/metadata';
 import styles from './get-app.module.css';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Download ZeroTrace APK — Android & Windows',
+  title: 'Download ZeroTrace APK for Android and Windows',
   description:
-    'Download ZeroTrace for Android (arm64 APK). Privacy-first file sanitizer — strip metadata, blur faces, catch secrets. 100% on-device. Source on GitHub.',
+    'Download ZeroTrace for Android (arm64 APK). Privacy-first file sanitizer. Strip metadata, blur faces, catch secrets. 100% on-device. Source on GitHub.',
   path: '/get-app',
   keywords: [
     'ZeroTrace download',
@@ -48,7 +48,6 @@ export default function GetAppPage() {
             className={styles.logo}
           />
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>{GET_APP_PAGE.eyebrow}</p>
             <h1 id="get-app-heading" className={styles.heading}>
               {GET_APP_PAGE.heading}
             </h1>

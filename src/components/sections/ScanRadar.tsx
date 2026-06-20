@@ -12,7 +12,6 @@ export function ScanRadar() {
         <div className={styles.grid}>
           <GsapScrollReveal blur={12} y={32}>
             <div className={styles.copy}>
-              <p className={styles.eyebrow}>On-device scan</p>
               <h2 id="live-scan-heading" className={styles.heading}>
                 See risks before you share
               </h2>
@@ -27,7 +26,6 @@ export function ScanRadar() {
 
           <GsapScrollReveal delay={0.1} blur={10} y={24}>
             <div className={styles.radarAside}>
-              <p className={styles.radarHint}>Live scan</p>
               <ScanRadarLoader />
             </div>
           </GsapScrollReveal>

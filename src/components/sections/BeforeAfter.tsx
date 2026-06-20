@@ -12,7 +12,6 @@ export function BeforeAfter() {
       <Container>
         <GsapScrollReveal blur={12} y={28}>
           <header className={styles.header}>
-            <p className={styles.eyebrow}>{BEFORE_AFTER_EXAMPLE.eyebrow}</p>
             <h2 id="proof-heading" className={styles.heading}>
               {BEFORE_AFTER_EXAMPLE.heading}
             </h2>

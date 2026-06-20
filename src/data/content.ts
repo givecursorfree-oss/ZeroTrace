@@ -22,7 +22,7 @@ export const SITE = {
 export const BRAND = {
   mark: '/logo_mark.png',
   full: '/logo_full.png',
-  fullAlt: 'ZeroTrace — Share files. Leave zero trace.',
+  fullAlt: 'ZeroTrace - Share files. Leave zero trace.',
 } as const;
 
 /** Plain-language legal copy — honest beta posture, not formal compliance claims. */
@@ -38,10 +38,9 @@ export const LEGAL = {
 } as const;
 
 export const HERO_COPY = {
-  eyebrow: 'Open-source · on-device privacy',
+  eyebrow: 'Open-source on-device privacy',
   subhead:
-    'Find GPS, EXIF, faces, license plates, and leaked secrets in your files — then export a clean copy with a verification report. Nothing leaves your device.',
-  proofLine: 'No server · No account · No analytics',
+    'Find hidden GPS, faces, and secrets in your files. Export a clean copy locally. Nothing leaves your device.',
 } as const;
 
 export const STEPS = [
@@ -122,14 +121,13 @@ export const PRIVACY_FACTS = [
 ] as const;
 
 export const SECTION_LEADS = {
-  howItWorks: 'Three steps from risky file to safe share — entirely on your device.',
+  howItWorks: 'Three steps from risky file to safe share, entirely on your device.',
   liveScan:
-    'ZeroTrace sweeps each file on your hardware — no upload, no cloud. You get a clear read on what would leak if you hit send.',
+    'See what would leak if you hit send. ZeroTrace flags risky metadata and content before you export.',
   features: 'Built for journalists, lawyers, and anyone who sends sensitive files.',
   openSource:
-    'ZeroTrace is a native app for Android and Windows — scanning happens on your device, not in a browser. The project is open source on GitHub for anyone who wants to audit the build.',
-  comparison:
-    'An honest look at what happens to your files — no marketing spin.',
+    'ZeroTrace is a native app for Android and Windows. Scanning happens on your device, not in a browser. Source is on GitHub for anyone who wants to audit the build.',
+  comparison: 'An honest look at what happens to your files. No marketing spin.',
   beforeAfter:
     'A typical photo export. Location data removed on your device before you send.',
 } as const;
@@ -146,25 +144,24 @@ export const HERO_CENTER_NAV = [
 export const HERO_NAV_LINKS = HERO_CENTER_NAV;
 
 export const GET_APP_PAGE = {
-  eyebrow: 'Download',
   heading: 'Install ZeroTrace on your device',
   lead:
-    'Pick your platform below. Files are scanned locally after install — nothing is uploaded during setup.',
+    'Pick your platform below. Files are scanned locally after install. Nothing is uploaded during setup.',
   verifyNote:
     'Verify checksums and read release notes on GitHub before installing beta builds.',
   platforms: [
     {
       id: 'android',
       name: 'Android',
-      detail: 'arm64 APK · Beta · No Google Play account required',
+      detail: 'arm64 APK, Beta, no Google Play account required',
       hrefKey: 'downloadUrl' as const,
-      cta: 'Download APK',
+      cta: 'Get the app',
       comingSoon: false,
     },
     {
       id: 'windows',
       name: 'Windows',
-      detail: 'Desktop app for Windows 10 and 11 · In development',
+      detail: 'Desktop app for Windows 10 and 11. In development.',
       hrefKey: 'windowsDownloadUrl' as const,
       cta: 'Coming soon',
       comingSoon: true,
@@ -201,7 +198,6 @@ export const DEVELOPER_NOTE = {
 } as const;
 
 export const BEFORE_AFTER_EXAMPLE = {
-  eyebrow: 'Before & after',
   heading: 'GPS stripped before you share',
   lead: SECTION_LEADS.beforeAfter,
   fileName: 'field-photo.jpg',
@@ -238,7 +234,6 @@ export const BEFORE_AFTER_EXAMPLE = {
 export type ComparisonColumnId = 'raw' | 'cloud' | 'zerotrace';
 
 export const COMPARISON = {
-  eyebrow: 'Honest comparison',
   heading: 'ZeroTrace vs sending raw vs cloud tools',
   lead: SECTION_LEADS.comparison,
   columns: [
@@ -249,9 +244,9 @@ export const COMPARISON = {
   rows: [
     {
       label: 'Files leave your device',
-      raw: 'Yes — hidden metadata goes with it',
-      cloud: 'Yes — uploaded to a third-party server',
-      zerotrace: 'No — processing stays local',
+      raw: 'Yes. Hidden metadata goes with it.',
+      cloud: 'Yes. Uploaded to a third-party server.',
+      zerotrace: 'No. Processing stays local.',
     },
     {
       label: 'Account required',
@@ -261,23 +256,23 @@ export const COMPARISON = {
     },
     {
       label: 'GPS / EXIF removal',
-      raw: 'No — location often embedded',
-      cloud: 'Yes — after upload',
-      zerotrace: 'Yes — before you export',
+      raw: 'No. Location often embedded.',
+      cloud: 'Yes, after upload.',
+      zerotrace: 'Yes, before you export.',
     },
     {
       label: 'You can verify the code',
       raw: 'N/A',
-      cloud: 'Rarely — closed source',
-      zerotrace: 'Yes — open source on GitHub',
+      cloud: 'Rarely. Closed source.',
+      zerotrace: 'Yes. Open source on GitHub.',
     },
     {
       label: 'Works offline',
       raw: 'N/A',
-      cloud: 'No — needs connection',
+      cloud: 'No. Needs connection.',
       zerotrace: 'Yes',
     },
   ],
   disclaimer:
-    'Cloud tools vary by vendor. This compares typical SaaS redaction workflows to ZeroTrace’s on-device model.',
+    'Cloud tools vary by vendor. This compares typical SaaS redaction workflows to ZeroTrace on-device model.',
 } as const;

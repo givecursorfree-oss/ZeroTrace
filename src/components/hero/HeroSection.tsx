@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, ArrowRightCircle, ArrowUpRight, Fingerprint, LockKeyhole } from 'lucide-react';
+import { ArrowRight, ArrowRightCircle, Fingerprint, LockKeyhole } from 'lucide-react';
 import { HERO_COPY, SITE } from '@/data/content';
 import { BetaBadge } from '@/components/ui/BetaBadge';
 import { BackgroundVideo } from './BackgroundVideo';
@@ -63,16 +63,6 @@ export function HeroSection() {
               </span>
             </motion.h1>
 
-            <motion.p
-              className="mt-6 text-sm text-[var(--color-driftwood)]"
-              variants={fadeUp}
-              custom={2}
-              initial={reduceMotion ? false : 'hidden'}
-              animate={reduceMotion ? false : 'visible'}
-            >
-              {HERO_COPY.proofLine}
-            </motion.p>
-
             <motion.div
               className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
               variants={fadeUp}
@@ -90,15 +80,6 @@ export function HeroSection() {
               </motion.a>
               <a href="#how-it-works" className="btn-secondary w-full justify-center px-5 py-3 sm:w-auto">
                 How it works
-              </a>
-              <a
-                href={SITE.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost w-full justify-center gap-1.5 px-4 py-3 sm:w-auto"
-              >
-                View source
-                <ArrowUpRight size={16} strokeWidth={1.75} aria-hidden="true" />
               </a>
             </motion.div>
           </div>

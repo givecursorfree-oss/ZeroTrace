@@ -16,7 +16,6 @@ export function Features() {
         <div className={styles.hero}>
           <GsapScrollReveal blur={12} y={28}>
             <header className={styles.headerCopy}>
-              <p className={styles.eyebrow}>Detection</p>
               <h2 className={styles.heading}>What ZeroTrace finds</h2>
               <p className={styles.lead}>{SECTION_LEADS.features}</p>
             </header>

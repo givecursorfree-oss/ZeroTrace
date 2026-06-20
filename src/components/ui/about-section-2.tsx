@@ -2,7 +2,7 @@
 
 import { DEVELOPER_NOTE, SITE } from '@/data/content';
 import { TimelineContent } from '@/components/ui/timeline-animation';
-import { Shield } from 'lucide-react';
+import { GitHubIcon } from '@/components/ui/GitHubIcon';
 import { useRef } from 'react';
 
 const highlightClass =
@@ -120,7 +120,7 @@ export default function AboutSection2() {
                 rel="noopener noreferrer"
                 className="inline-flex h-12 cursor-pointer items-center gap-2 rounded-full bg-[var(--color-midnight-ink)] px-5 text-sm font-medium text-[var(--color-parchment-white)] shadow-[0_12px_32px_-12px_rgba(25,40,55,0.45)]"
               >
-                <Shield fill="currentColor" size={16} aria-hidden="true" />
+                <GitHubIcon size={16} />
                 View source
               </TimelineContent>
             </div>

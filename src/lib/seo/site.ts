@@ -19,7 +19,7 @@ export const SEO_KEYWORDS = [
 ] as const;
 
 export const DEFAULT_DESCRIPTION =
-  'ZeroTrace is a privacy-first file sanitizer for Android and Windows. Remove EXIF metadata, GPS, faces, license plates, and leaked secrets before you share — 100% on-device, open source.';
+  'ZeroTrace is a privacy-first file sanitizer for Android and Windows. Remove EXIF metadata, GPS, faces, license plates, and leaked secrets before you share. 100% on-device, open source.';
 
 export const SITE_AUTHOR = {
   name: SITE.name,

@@ -11,7 +11,6 @@ export function Comparison() {
       <Container>
         <GsapScrollReveal blur={12} y={28}>
           <header className={styles.header}>
-            <p className={styles.eyebrow}>{COMPARISON.eyebrow}</p>
             <h2 id="compare-heading" className={styles.heading}>
               {COMPARISON.heading}
             </h2>

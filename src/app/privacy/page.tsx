@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
           <p>
             ZeroTrace is privacy-first software. Your files are scanned, sanitized, and exported on
             your device. We do not receive, store, or process your file contents on our servers.
-            This policy describes our intent as an open-source project — not a formal data-processing
+            This policy describes our intent as an open-source project. It is not a formal data-processing
             agreement.
           </p>
         </section>

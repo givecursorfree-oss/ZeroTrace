@@ -12,7 +12,6 @@ export function OpenSource() {
         <GsapScrollReveal>
           <div className={styles.card}>
             <div>
-              <p className={styles.eyebrow}>Open source</p>
               <h2 id="open-source-heading" className={styles.heading}>
                 A native app you can verify
               </h2>
@@ -29,7 +28,7 @@ export function OpenSource() {
                 rel="noopener noreferrer"
                 className="btn-secondary gap-2 px-6 py-3"
               >
-                Source on GitHub
+                GitHub
                 <ArrowUpRight size={18} strokeWidth={1.75} aria-hidden="true" />
               </a>
             </div>

@@ -10,7 +10,7 @@ export function HowItWorks() {
       <Container>
         <GsapScrollReveal>
           <div className={styles.intro}>
-            <h2 className={styles.heading}>Scan, sanitize, share — on your device</h2>
+            <h2 className={styles.heading}>Scan, sanitize, share on your device</h2>
             <p className={styles.lead}>{SECTION_LEADS.howItWorks}</p>
           </div>
         </GsapScrollReveal>

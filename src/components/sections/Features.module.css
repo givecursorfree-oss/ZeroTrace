@@ -14,15 +14,8 @@
 
 .headerCopy {
   max-width: 52ch;
-}
-
-.eyebrow {
-  margin-bottom: var(--spacing-12);
-  font-size: 11px;
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-fog);
+  margin-inline: auto;
+  text-align: center;
 }
 
 .heading {
@@ -114,19 +107,18 @@
 
 @media (min-width: 768px) {
   .hero {
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: var(--spacing-24);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-32);
     margin-bottom: var(--spacing-56);
   }
 
   .burstZone {
     min-height: 400px;
-    justify-self: stretch;
   }
 
   .burst {
     width: 100%;
-    max-width: 540px;
+    max-width: 640px;
     min-height: 400px !important;
     height: 400px !important;
   }

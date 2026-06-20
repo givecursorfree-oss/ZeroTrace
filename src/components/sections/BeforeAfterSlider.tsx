@@ -120,7 +120,7 @@ export function BeforeAfterSlider({
             onChange={(e) => setPosition(Number(e.target.value))}
             onKeyDown={onKeyDown}
             className={styles.range}
-            aria-valuetext={`${Math.round(position)} percent — showing original on the left, sanitized on the right`}
+            aria-valuetext={`${Math.round(position)} percent. Original on the left, sanitized on the right.`}
           />
         </div>
 
