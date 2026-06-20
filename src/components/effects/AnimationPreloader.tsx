@@ -41,25 +41,19 @@ function finishPreloader(setPhase: (phase: 'loading' | 'exiting' | 'done') => vo
   setPhase('exiting');
 }
 
-function PreloaderLogo() {
-  return (
-    <ProtectedImage
-      src={BRAND.full}
-      alt=""
-      width={360}
-      height={160}
-      priority
-      sizes="(max-width: 480px) 240px, 360px"
-      className={styles.brandLogo}
-    />
-  );
-}
-
+/** Simple fallback when the Framer loader is unavailable — logo + progress only. */
 function PreloaderFallback() {
   return (
     <div className={styles.fallback} aria-hidden="true">
-      <PreloaderLogo />
-      <p className={styles.fallbackBrand}>{SITE.name}</p>
+      <ProtectedImage
+        src={BRAND.mark}
+        alt=""
+        width={160}
+        height={160}
+        priority
+        sizes="160px"
+        className={styles.fallbackLogo}
+      />
       <div className={styles.fallbackTrack}>
         <div className={styles.fallbackBar} />
       </div>
@@ -170,7 +164,7 @@ export function AnimationPreloader() {
       onTransitionEnd={handleFadeEnd}
       role="status"
       aria-live="polite"
-      aria-label="Loading ZeroTrace"
+      aria-label={`Loading ${SITE.name}`}
     >
       {phase === 'loading' ? (
         <button type="button" className={styles.skip} onClick={handleSkip}>
@@ -183,22 +177,19 @@ export function AnimationPreloader() {
       <div className={styles.loaderStage} aria-hidden={phase === 'exiting'}>
         {AnimationLoader && !vendorFailed ? (
           <div className={styles.loaderScale}>
-            <div className={styles.loaderInner}>
-              <PreloaderLogo />
-              <AnimationLoader
-                brandName={SITE.name}
-                counterDuration={COUNTER_DURATION}
-                background="#050505"
-                textColor="#f5f2eb"
-                transition={{
-                  delay: 0,
-                  duration: COUNTER_DURATION,
-                  ease: [0.12, 0.23, 0.5, 1],
-                  type: 'tween',
-                }}
-                style={{ width: '100%', height: '100%' }}
-              />
-            </div>
+            <AnimationLoader
+              brandName={SITE.name}
+              counterDuration={COUNTER_DURATION}
+              background="#fdfcfc"
+              textColor="#000000"
+              transition={{
+                delay: 0,
+                duration: COUNTER_DURATION,
+                ease: [0.12, 0.23, 0.5, 1],
+                type: 'tween',
+              }}
+              style={{ width: '100%', height: '100%' }}
+            />
           </div>
         ) : (
           <PreloaderFallback />
